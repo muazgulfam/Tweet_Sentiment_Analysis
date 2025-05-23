@@ -54,7 +54,7 @@ Despite high volumes of Indo-Pak discourse on Twitter, there's **no real-time sy
 
 ## 🔁 System Pipeline
 
-![System Design](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Architecture_diagram.png/800px-Architecture_diagram.png)
+![System Design](assets/system_design.png)
 
 1. **Scrape tweets** based on hashtags: `#India`, `#Pakistan`, `#Kashmir`, etc.
 2. **Preprocess tweets** with `NLTK`, `regex`, emoji decoding
@@ -66,7 +66,7 @@ Despite high volumes of Indo-Pak discourse on Twitter, there's **no real-time sy
 
 ## 🏗️ app.py Structure
 
-```bash
+```text
 app.py
 ├── streamlit_dashboard()        # Main Streamlit UI
 ├── load_tweets_from_db()       # Supabase fetch logic
@@ -77,8 +77,7 @@ app.py
 ├── plot_region_analysis()      # Geo-based analysis
 ├── plot_sports_emotion()       # Indo-Pak cricket sentiment
 └── plot_polarity_curve()       # Distribution of polarity
-
----
+```
 
 ---
 
@@ -112,6 +111,7 @@ pip install -r requirements.txt
 
 # Run the app
 streamlit run app.py
+streamlit run app.py --logger.level=debug
 ```
 
 ---
